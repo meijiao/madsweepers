@@ -81,10 +81,8 @@ io.on('connection', function(socket){
   socket.on('danceParty', function(data){
     var roomName = clients[socket.id]['roomName'];
     var myUserName = clients[socket.id].user;
-    console.log(myUserName, 'myusername')
 
     var status = gameManager.rooms[roomName].players.playerLocations;
-
     // change status of other players to 5, which makes them dance on the client
     for (var user in status) {
       if (user !== myUserName) {
@@ -94,15 +92,10 @@ io.on('connection', function(socket){
 
     const boardSize = [gameManager.rooms[roomName].board.board[0].length, gameManager.rooms[roomName].board.board.length];
 
-    console.log(status, 'status on server')
-
     io.to(roomName).emit('danceParty', status, boardSize);
 
     // get username of all players for the room we are in; 
     var players =  Object.keys(status);
-
-    console.log(gameManager.rooms[roomName].players, 'players')
-    // add CSS to make other players rotate
 
     // stun all other players except yourself
     players.forEach((user) => {
