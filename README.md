@@ -1,5 +1,5 @@
 # MadSweeper
-Demo: www.madsweepers.com
+Website: www.madsweepers.com
 
 ## Table of Contents
 
@@ -10,9 +10,13 @@ Demo: www.madsweepers.com
 4. [Team](#team)
 5. [Contributing](#contributing)
 
-## Game
+## Game Overview
 
 Connect and play minesweeper on steroids! Multi-player, sabotage your friends edition.
+
+<img src='./MadSweepers.gif'/> 
+
+## Game Play
 
 - Arrow keys to move
 - Space to reveal tiles
@@ -21,14 +25,15 @@ Connect and play minesweeper on steroids! Multi-player, sabotage your friends ed
 - 'd' to shoot bullets
 - 'f' to mark mines.
 
-[insert gif here]
 
-
-## Stack
+## Tech Stack
 
 - Front End: React, Redux, Babel, Webpack
-- Back End: Node, Express, Socket.io
+- Back End: Node, Express, Socket.io, Redis, AWS
 - Test Suite: Chai, Mocha, Sinon, JsDom
+
+More details are available in ./documentation/Madsweepers overview.pdf
+
 
 ## Development
 
